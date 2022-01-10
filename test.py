@@ -1,4 +1,6 @@
 import random
+import math
+
 names=[]
 totnumpep=int(input("Enter the number of people in group: "))
 for i in range(totnumpep):
@@ -8,8 +10,9 @@ counter=1
 a=int(input("Enter group numbers:"))
 c=len(names)
 peopingrp=int(c/a)
-modd=c%peopingrp
-if modd==1:
+float_peopingrp=float(c/a)
+modd=c%float_peopingrp
+if modd>0:
     excep=int(input("in which group do you want extra person:"))
 for i in range(a):
     for j in range(peopingrp):
